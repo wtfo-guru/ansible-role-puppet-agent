@@ -9,5 +9,5 @@
 - name: Solaris | Puppet-agent service
   service:
     name: "{{ puppet_agent_service }}"
-    state: started
-    enabled: yes
+    state: "{{ puppet_agent_service_ensure }}"
+    enabled: "{{ puppet_agent_service_enable }}"

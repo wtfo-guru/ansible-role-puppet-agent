@@ -142,6 +142,14 @@ puppet_agent_runinterval: 30m
 #   - report = true
 #   - daemonize = false
 puppet_agent_custom_options:
+
+# The state the service should be following installation one of started,stopped not implemented for OSX
+# Default is started, can be stopped. On Windows default will be auto
+puppet_agent_service_ensure: started
+
+# Setting to specify whether the puppet agent should start after reboot
+# Default yes. On Windows default will be auto
+puppet_agent_service_enable: yes
 ```
 
 ## Dependencies

@@ -10,5 +10,6 @@
 - name: Windows | Puppet-agent service
   win_service:
     name: puppet
-    start_mode: auto
+    start_mode: "{{ puppet_agent_service_enable }}"
     state: started
+    state: "{{ puppet_agent_service_ensure }}"

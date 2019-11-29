@@ -40,4 +40,6 @@
 
 - name: Darwin | Puppet-agent service on osx
   command: launchctl load -w /Library/LaunchDaemons/com.puppetlabs.puppet.plist
-  when: puppet_service.rc != 0
+  when:
+    - puppet_service.rc != 0
+    - puppet_agent_service_ensure != "stopped"
